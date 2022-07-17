@@ -11,75 +11,23 @@
 
 body {
     /* Main colors */
-    --primary-10: #001f24;
-    --primary-20: #00363d;
-    --primary-30: #004f59;
-    --primary-40: #006875;
-    --primary-80: #50d7ed;
-    --primary-90: #9defff;
+    --color-1: #161414;
+    --color-2: #1c1c1c;
+    --color-3: #212121;
+    --inverted: #e9e8ea;
+    --inverted-soft: #e9e8ea44;
+    --accent: #f23269;
+    --accent-soft: #f25481;
 
-    --secondary-10: #002111;
-    --secondary-20: #003920;
-    --secondary-30: #005230;
-    --secondary-40: #006d42;
-    --secondary-80: #77daa1;
-    --secondary-90: #93f7bb;
-
-    --tertiary-10: #181e00;
-    --tertiary-20: #2b3400;
-    --tertiary-30: #404c00;
-    --tertiary-40: #556500;
-    --tertiary-80: #bcd063;
-    --tertiary-90: #d8ed7c;
-
-    --neutral-10: #1a1c18;
-    --neutral-90: #e0e4d7;
-    --neutral-99: #fdfdf5;
-
-    --neutral-variant-30: #1e2020;
-    --neutral-variant-50: #434747;
-    --neutral-variant-60: #545959;
-    --neutral-variant-80: #6d7474;
-    --neutral-variant-90: #777e7e;
-
-    --error-10: #410002;
-    --error-20: #690005;
-    --error-30: #93000a;
-    --error-40: #ba1a1a;
-    --error-80: #ffb4ab;
-    --error-90: #ffdad6;
-
-    /* Named colors */
-    --primary: var(--primary-40);
-    --on-primary: white;
-    --primary-container: var(--primary-90);
-    --on-primary-container: var(--primary-10);
-    
-    --secondary: var(--secondary-40);
-    --on-secondary: white;
-    --secondary-container: var(--secondary-90);
-    --on-secondary-container: var(--secondary-10);
-    
-    --tertiary: var(--tertiary-40);
-    --on-tertiary: white;
-    --tertiary-container: var(--tertiary-90);
-    --on-tertiary-container: var(--tertiary-10);
-    
-    --error: var(--error-40);
-    --on-error: white;
-    --error-container: var(--error-90);
-    --on-error-container: var(--error-10);
-    
-    --background: var(--neutral-99);
-    --on-background: var(--neutral-10);
-    
-    --background-variant: var(--neutral-variant-90);
-    --on-background-variant: var(--neutral-variant-30);
-    --outline: var(--neutral-variant-50);
+    /* --color-1: #18191a;
+    --color-2: #242526;
+    --color-3: #3a3b3c;
+    --inverted: #e4e6eb;
+    --inverted-2: #b0b3b8; */
 
 
-    background-color: var(--background);
-    color: var(--on-background);
+    background-color: var(--color-1);
+    color: var(--inverted);
 
     /* Params */
     --radius-small: 0.5em;
@@ -95,27 +43,17 @@ body {
 }
 
 /* Dark theme */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     ::selection {
         background-color: #00000088;
     }
     body {
-        --primary: var(--primary-80);
+        --primary: var(--color-10);
         --on-primary: var(--primary-20);
         --primary-container: var(--primary-30);
         --on-primary-container: var(--primary-90);
         
-        --secondary: var(--secondary-80);
-        --on-secondary: var(--secondary-20);
-        --secondary-container: var(--secondary-30);
-        --on-secondary-container: var(--secondary-90);
-        
-        --tertiary: var(--tertiary-80);
-        --on-tertiary: var(--tertiary-20);
-        --tertiary-container: var(--tertiary-30);
-        --on-tertiary-container: var(--tertiary-90);
-        
-        --background: var(--neutral-10);
+        --background: var(--color-10);
         --on-background: var(--neutral-90);
         
         --background-variant: var(--neutral-variant-30);
@@ -127,18 +65,6 @@ body {
 /* key colors */
 ::selection {
     background-color: #ffffffcc;
-}
-.primary {
-    background-color: var(--primary);
-    color: var(--on-primary);
-}
-.secondary {
-    background-color: var(--secondary);
-    color: var(--on-secondary);
-}
-.tertiary {
-    background-color: var(--tertiary);
-    color: var(--on-tertiary);
 }
 
 /********************/
@@ -163,7 +89,7 @@ body {
 }
 
 .flex.border {    
-    border: solid 1px var(--outline);
+    border: solid 1px var(--inverted-soft);
     border-radius: var(--radius-medium);
     margin-block: 0.25em;
     overflow: hidden;
@@ -228,6 +154,7 @@ body {
     padding: 1em;
     border-radius: var(--radius-small);
     margin: 0.5em;
+    background-color: var(--color-2);
 }
 
 /* Button */

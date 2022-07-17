@@ -14,8 +14,8 @@ body {
     --color-1: #141414;
     --color-2: #1c1c1c;
     --color-3: #212121;
-    --inverted: #e8e8ea;
-    --inverted-soft: #e9e8ea44;
+    --inverted: #e8e8e8;
+    --inverted-soft: #e8e8e844;
     --accent: #f23269;
     --accent-soft: #f25481;
 
@@ -48,11 +48,11 @@ body {
         background-color: #00000088;
     }
     body {
-        --color-1: #141414;
-        --color-2: #1c1c1c;
-        --color-3: #212121;
-        --inverted: #e9e8ea;
-        --inverted-soft: #e9e8ea44;
+        --color-1: #f2f2f2;
+        --color-2: #f2f2f2;
+        --color-3: #c1c1c1;
+        --inverted: #2a2a2a;
+        --inverted-soft: #4c4c4c;
         --accent: #f23269;
         --accent-soft: #f25481;
     }

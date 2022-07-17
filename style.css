@@ -1,0 +1,244 @@
+* {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+    /* Main colors */
+    --primary-10: #001f24;
+    --primary-20: #00363d;
+    --primary-30: #004f59;
+    --primary-40: #006875;
+    --primary-80: #50d7ed;
+    --primary-90: #9defff;
+
+    --secondary-10: #002111;
+    --secondary-20: #003920;
+    --secondary-30: #005230;
+    --secondary-40: #006d42;
+    --secondary-80: #77daa1;
+    --secondary-90: #93f7bb;
+
+    --tertiary-10: #181e00;
+    --tertiary-20: #2b3400;
+    --tertiary-30: #404c00;
+    --tertiary-40: #556500;
+    --tertiary-80: #bcd063;
+    --tertiary-90: #d8ed7c;
+
+    --neutral-10: #1a1c18;
+    --neutral-90: #e0e4d7;
+    --neutral-99: #fdfdf5;
+
+    --neutral-variant-30: #1e2020;
+    --neutral-variant-50: #434747;
+    --neutral-variant-60: #545959;
+    --neutral-variant-80: #6d7474;
+    --neutral-variant-90: #777e7e;
+
+    --error-10: #410002;
+    --error-20: #690005;
+    --error-30: #93000a;
+    --error-40: #ba1a1a;
+    --error-80: #ffb4ab;
+    --error-90: #ffdad6;
+
+    /* Named colors */
+    --primary: var(--primary-40);
+    --on-primary: white;
+    --primary-container: var(--primary-90);
+    --on-primary-container: var(--primary-10);
+    
+    --secondary: var(--secondary-40);
+    --on-secondary: white;
+    --secondary-container: var(--secondary-90);
+    --on-secondary-container: var(--secondary-10);
+    
+    --tertiary: var(--tertiary-40);
+    --on-tertiary: white;
+    --tertiary-container: var(--tertiary-90);
+    --on-tertiary-container: var(--tertiary-10);
+    
+    --error: var(--error-40);
+    --on-error: white;
+    --error-container: var(--error-90);
+    --on-error-container: var(--error-10);
+    
+    --background: var(--neutral-99);
+    --on-background: var(--neutral-10);
+    
+    --background-variant: var(--neutral-variant-90);
+    --on-background-variant: var(--neutral-variant-30);
+    --outline: var(--neutral-variant-50);
+
+
+    background-color: var(--background);
+    color: var(--on-background);
+
+    /* Params */
+    --radius-small: 0.5em;
+    --radius-medium: 1em;
+    --radius-huge: 2em;
+
+    /* General */
+    position: absolute;
+    inset: 0;
+    padding: 0.5em;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background-color: #00000088;
+    }
+    body {
+        --primary: var(--primary-80);
+        --on-primary: var(--primary-20);
+        --primary-container: var(--primary-30);
+        --on-primary-container: var(--primary-90);
+        
+        --secondary: var(--secondary-80);
+        --on-secondary: var(--secondary-20);
+        --secondary-container: var(--secondary-30);
+        --on-secondary-container: var(--secondary-90);
+        
+        --tertiary: var(--tertiary-80);
+        --on-tertiary: var(--tertiary-20);
+        --tertiary-container: var(--tertiary-30);
+        --on-tertiary-container: var(--tertiary-90);
+        
+        --background: var(--neutral-10);
+        --on-background: var(--neutral-90);
+        
+        --background-variant: var(--neutral-variant-30);
+        --on-background-variant: var(--neutral-variant-80);
+        --outline: var(--neutral-variant-60);
+    }
+}
+
+/* key colors */
+::selection {
+    background-color: #ffffffcc;
+}
+.primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+.secondary {
+    background-color: var(--secondary);
+    color: var(--on-secondary);
+}
+.tertiary {
+    background-color: var(--tertiary);
+    color: var(--on-tertiary);
+}
+
+/********************/
+/****** Layout ******/
+/********************/
+
+/* flex */
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex.column {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+.flex.row {
+    flex-direction: row;
+}
+
+.flex.border {    
+    border: solid 1px var(--outline);
+    border-radius: var(--radius-medium);
+    margin-block: 0.25em;
+    overflow: hidden;
+}
+
+/* Center */
+.absolute-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.absolute-center.top {
+    top: 0;
+    transform: translateX(-50%);
+}
+.absolute-center.bottom {
+    top: unset;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+/**/
+
+
+/********************/
+/**** Properties ****/
+/********************/
+
+.button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button:hover {
+    transform: scale(1.05);
+}
+.button:active {    
+    filter: grayscale(1);
+    transform: scale(0.9);
+}
+
+.rounded-small {
+    border-radius: var(--radius-small);
+    overflow: hidden;
+}
+.rounded-medium {
+    border-radius: var(--radius-medium);
+    overflow: hidden;
+}
+.rounded-huge {
+    border-radius: var(--radius-huge);
+    overflow: hidden;
+}
+
+/********************/
+/***** Elements *****/
+/********************/
+
+/* Card */
+
+.card {
+    padding: 1em;
+    border-radius: var(--radius-small);
+    margin: 0.5em;
+}
+
+/* Button */
+
+/* Img */
+.img {
+    min-width: 1em;
+    min-height: 1em;
+    background-size: cover;
+}
+.img.square {
+    aspect-ratio: 1/1!important;
+    border-radius: var(--radius-medium);
+}

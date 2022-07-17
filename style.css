@@ -11,10 +11,10 @@
 
 body {
     /* Main colors */
-    --color-1: #161414;
+    --color-1: #141414;
     --color-2: #1c1c1c;
     --color-3: #212121;
-    --inverted: #e9e8ea;
+    --inverted: #e8e8ea;
     --inverted-soft: #e9e8ea44;
     --accent: #f23269;
     --accent-soft: #f25481;
@@ -48,17 +48,13 @@ body {
         background-color: #00000088;
     }
     body {
-        --primary: var(--color-10);
-        --on-primary: var(--primary-20);
-        --primary-container: var(--primary-30);
-        --on-primary-container: var(--primary-90);
-        
-        --background: var(--color-10);
-        --on-background: var(--neutral-90);
-        
-        --background-variant: var(--neutral-variant-30);
-        --on-background-variant: var(--neutral-variant-80);
-        --outline: var(--neutral-variant-60);
+        --color-1: #141414;
+        --color-2: #1c1c1c;
+        --color-3: #212121;
+        --inverted: #e9e8ea;
+        --inverted-soft: #e9e8ea44;
+        --accent: #f23269;
+        --accent-soft: #f25481;
     }
 }
 

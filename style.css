@@ -28,7 +28,7 @@ body {
 
     background-color: var(--color-1);
     color: var(--inverted);
-    accent-color: var(--accent-soft);
+    accent-color: var(--accent);
 
     /* Params */
     --radius-small: 0.5em;

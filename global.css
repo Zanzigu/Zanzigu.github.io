@@ -101,7 +101,7 @@ body > nav::before {
 body > nav > ul {
     text-align: center;
 }
-body > nav > ul > li {
+body > nav > ul li {
     padding: 0.5em;
     margin: 0.75em 0.5em 0.75em 0.5em;
     width: 2em;
@@ -120,7 +120,7 @@ body > nav > ul > li {
     list-style: none;
     display: inline-block;
 }
-body > nav > ul > li::before {
+body > nav > ul li::before {
     content: '';
     position: absolute;
     top: 0;
@@ -132,19 +132,19 @@ body > nav > ul > li::before {
     opacity: 0.5;
     transition: 0.25s;
 }
-body > nav > ul > li:hover:before {
+body > nav > ul li:hover:before {
     background-color: var(--accent);
 }
-body > nav > ul > li.active::before {
+body > nav > ul li.active::before {
     background-color: var(--accent);
     opacity: 1;
 }
 
 
-body > nav > ul > li.start {
+body > nav > ul li.start {
     float: left;
 }
-body > nav > ul > li.end {
+body > nav > ul li.end {
     float: right;
 }
 
@@ -212,7 +212,7 @@ body > nav ~ div.container {
         transform-origin: left bottom;
         transform: rotate(90deg) translate(-100%, 0);
     }
-    body > nav > ul > li {
+    body > nav > ul li {
         transform: rotate(-90deg);
     }
     

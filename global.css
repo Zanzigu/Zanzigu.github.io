@@ -99,6 +99,7 @@ body > nav::before {
 
 body > nav a {
     color: unset;
+    text-decoration: unset;
 }
 
 body > nav > ul {

@@ -80,6 +80,7 @@ body > nav {
     overflow: hidden;
     position: fixed;
     z-index: 5;
+    user-select: none;
 
     box-shadow: #00000044 0px 5px 20px;
 
@@ -115,7 +116,6 @@ body > nav > ul > li {
     aspect-ratio: 1/1;
     position: relative;
     overflow: hidden;
-    user-select: none;
     cursor: pointer;
     list-style: none;
     display: inline-block;

@@ -1,4 +1,4 @@
-const cardsContainer = document.getElementById('cardsContainer');
+const cardsContainer = document.getElementsByClassName('cardsContainer')[0];
 
 const cardWidth = cardsContainer.children[0].clientWidth + (cardsContainer.children[0].clientWidth / 100 * 6);
 const cardMargin = parseInt(window.getComputedStyle(cardsContainer.children[0]).marginLeft);

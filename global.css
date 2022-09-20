@@ -254,6 +254,58 @@ hr {
 }
 
 
+/********/
+/* form */
+
+form {            
+    position: relative;    
+    text-align: right;
+    width: fit-content;
+    margin: 25% auto 0 auto;
+    padding: 1em;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--color-3) 3px 3px 0;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+form::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-2);
+    opacity: 1;
+}
+
+form > span {
+    position: relative;
+    top: 0.25em;
+}
+form > span, form > label {
+    margin: 0.5em;
+}
+
+form > input {
+    padding: 0.5em 1em 0.5em 1em;
+    color: var(--inverted);
+    box-shadow: var(--color-3) 2px 2px 0 2px, var(--color-3) 0 0 0 2px;
+    border-radius: var(--radius-huge);
+    background: var(--color-2);
+}
+form > input ~ input {
+    margin: 1.25em 0 0 0;
+}
+
+form > input[type=submit] {
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    transition: 0.25s;
+}
+form > input[type=submit]:hover {
+    filter: invert(0.9);
+}
+
+
 /***************/
 /* @media tags */
 

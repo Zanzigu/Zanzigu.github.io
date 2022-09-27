@@ -286,7 +286,7 @@ form > span, form > label {
     margin: 0.5em;
 }
 
-form > input:not([type="radio"]), form > select {
+form > input:not([type="radio"]):not([type="checkbox"]), form > select {
     padding: 0.5em 1em 0.5em 1em;
     color: var(--inverted);
     box-shadow: var(--color-3) 2px 2px 0 2px, var(--color-3) 0 0 0 2px;

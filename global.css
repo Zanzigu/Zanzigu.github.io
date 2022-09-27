@@ -267,6 +267,7 @@ form {
     box-shadow: var(--color-3) 3px 3px 0;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    border: solid 3px var(--color-3);
 }
 form::before {
     z-index: -1;

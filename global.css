@@ -286,7 +286,7 @@ form > span, form > label {
     margin: 0.5em;
 }
 
-form > input:not([type="radio"]) {
+form > input:not([type="radio"]), form > select {
     padding: 0.5em 1em 0.5em 1em;
     color: var(--inverted);
     box-shadow: var(--color-3) 2px 2px 0 2px, var(--color-3) 0 0 0 2px;
@@ -297,12 +297,12 @@ form > input ~ input {
     margin: 1.25em 0 0 0;
 }
 
-form > input[type=submit], form > input[type=cancel] {
+form > input[type=submit], form > input[type=reset] {
     border-radius: var(--radius-small);
     cursor: pointer;
     transition: 0.25s;
 }
-form > input[type=submit]:hover, form > input[type=cancel]:hover {
+form > input[type=submit]:hover, form > input[type=reset]:hover {
     filter: invert(0.9);
 }
 

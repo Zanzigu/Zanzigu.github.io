@@ -10,10 +10,10 @@
 }
 body {
     /* Main colors */
-    --color-1: #f2f2f2;
-    --color-2: #f2f2f2;
-    --color-3: #c1c1c1;
-    --inverted: #323232;
+    --color-1: #f8f8f8;
+    --color-2: #fefefe;
+    --color-3: #c2c2c2;
+    --inverted: #414141;
     --inverted-soft: #4a4a4a;
     --accent: #f23269;
     --accent-soft: #fb7fa2; /* #f25481 */
@@ -23,9 +23,9 @@ body {
     accent-color: var(--accent);
 
     /* Params */
-    --radius-small: 0.5em;
-    --radius-medium: 1em;
-    --radius-huge: 2em;
+    --radius-small: 0.5rem;
+    --radius-medium: 1rem;
+    --radius-huge: 2rem;
 
     /* General */
     position: absolute;
@@ -46,8 +46,8 @@ body {
     body {
         --color-1: #141414;
         --color-2: #1c1c1c;
-        --color-3: #212121;
-        --inverted: #e8e8e8;
+        --color-3: #252525;
+        --inverted: #e1e1e1;
         --inverted-soft: #888888;
         --accent: #f23269;
         --accent-soft: #f25481;
@@ -69,53 +69,62 @@ body {
     overflow: hidden;
 }
 
+.border {
+    border: solid var(--color-3) 2px;
+    box-shadow: var(--color-3) 2px 2px;
+    transition: 0.25s;
+}
+.border.hover {
+    box-shadow: var(--color-3) 0 0;
+}
+.border.hover:hover {
+    box-shadow: var(--color-3) 2px 2px;
+    cursor: pointer;
+}
+
 
 /* ELEMENTS */
 
 /* Nav */
 
 body > nav {
-    width: 100%;
-    height: fit-content;
+    width: calc(100% - 1.5em);
+    height: calc(1.5em + 0.5em*2 + 0.5em*2 + 2px*2);
+    transform: translate(0.5em, -0.5em);
+
+    border-radius: 0.75em;
     overflow: hidden;
     position: fixed;
     z-index: 5;
     user-select: none;
+    background-color: var(--color-2);
 
-    box-shadow: #00000044 0px 5px 20px;
+    box-shadow: var(--color-3) 2px 2px;
+    border: var(--color-3) solid 2px;
 
     bottom: 0;
-}
-body > nav::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-color: var(--color-2);
-}
-
-body > nav a {
-    color: unset;
-    text-decoration: unset;
 }
 
 body > nav > ul {
     text-align: center;
+    position: absolute;
+    inset: 0;
 }
 body > nav > ul li {
     padding: 0.5em;
-    margin: 0.75em 0.5em 0.75em 0.5em;
-    width: 2em;
-    height: 2em;
+    margin: 0.5em;
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
 
     text-align: center;
-    line-height: 2em;
+    line-height: 1.5em;
     
-    box-shadow: var(--color-3) 2px 2px;
+    border: solid var(--color-3) 2px;
+    box-shadow: var(--color-3) 0 0;
+    transition: 0.25s;
 
+    background-color: var(--color-2);
     border-radius: var(--radius-small);
     aspect-ratio: 1/1;
     position: relative;
@@ -124,26 +133,15 @@ body > nav > ul li {
     list-style: none;
     display: inline-block;
 }
-body > nav > ul li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: var(--accent-soft);
-    opacity: 0.5;
-    transition: 0.25s;
-}
-body > nav > ul li:hover:before {
-    background-color: var(--accent);
-}
-body > nav > ul li.active::before {
-    background-color: var(--accent);
-    opacity: 1;
-}
 
+body > nav > ul li > * {
+    position: absolute;
+    inset: 0;
+    line-height: 2.5em;
+}
+body > nav > ul li span.material-symbols-rounded {
+    line-height: 1.6em;
+}
 
 body > nav > ul li.start {
     float: left;
@@ -152,13 +150,59 @@ body > nav > ul li.end {
     float: right;
 }
 
+body > nav > ul li:hover {
+    box-shadow: var(--color-3) 2px 2px;
+}
+body > nav > ul li.active {
+    border: solid var(--accent) 2px;
+    box-shadow: var(--accent) 0 0;
+}
+body > nav > ul li.active:hover {
+    box-shadow: var(--accent) 2px 2px;
+}
+body > nav > ul li:active {
+    transition: 0.1s;
+    filter: invert(0.75);
+}
+
+body > nav a {
+    color: unset;
+    text-decoration: unset;
+}
+
+@media screen and (min-width: 950px) {
+    /* desktop mode */
+    body > nav {
+        width: calc(100vh - 1.5em);
+        transform-origin: left bottom;
+        transform: rotate(90deg) translate(calc(-100% - 0.75em), -0.5em);
+
+        box-shadow: var(--color-3) 2px -2px;
+    }
+    body > nav > ul li {
+        transform: rotate(-90deg);
+    }
+    
+    body > nav > ul li span.material-symbols-rounded {
+        line-height: 1.5em;
+    }
+}
+
 
 /* body > main container */
 
 body > nav ~ div.container {
     position: absolute;
     inset: 0;
-    margin: 0 0 4.75em 0;
+    margin: 0 0 4.5em 0;
+}
+
+@media screen and (min-width: 950px) {
+    /* desktop mode */
+    
+    body > nav ~ div.container {
+        margin: 0 0 0 5.75em;
+    }
 }
 
 
@@ -206,8 +250,8 @@ hr {
     padding: 6.5vw;
     margin: 6vw;
     border-radius: var(--radius-medium);
-    box-shadow: var(--color-3) 4px 4px 0, black 0 0 10px -8px;
-    border: var(--color-3) solid 3px;
+    box-shadow: var(--color-3) 2px 2px 0;
+    border: var(--color-3) solid 2px;
 
     min-width: 75vw;
     
@@ -225,11 +269,11 @@ hr {
 }
 
 .cards-list > .card {
-    box-shadow: var(--color-3) 4px 4px 0, black 0 0 10px -8px;
-    border: var(--color-3) solid 3px;
+    box-shadow: var(--color-3) 2px 2px 0;
+    border: var(--color-3) solid 2px;
     padding: 1.75em 1.75em 1.25em 1.75em;
     margin: 1em;
-    border-radius: var(--radius-huge);
+    border-radius: var(--radius-medium);
     background-color: var(--color-2);
 }
 
@@ -314,20 +358,7 @@ form > input[type=submit]:hover, form > input[type=reset]:hover {
 
 @media screen and (min-width: 950px) {
     /* desktop mode */
-    body > nav {
-        width: 100vh;
-        transform-origin: left bottom;
-        transform: rotate(90deg) translate(-100%, 0);
-    }
-    body > nav > ul li {
-        transform: rotate(-90deg);
-    }
-    
-    body > nav ~ div.container {
-        margin: 0 0 0 5.75em;
-    }
 
-    
     .cardsContainer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -342,32 +373,9 @@ form > input[type=submit]:hover, form > input[type=reset]:hover {
         padding: 1.5em;
         margin: 1em;
         border-radius: var(--radius-medium);
-        box-shadow: var(--color-3) 3px 3px;
+        box-shadow: var(--color-3) 2px 2px;
 
         display: inline-block;
         min-width: unset;
-    }
-}
-
-/* smaller devices */
-@media screen and (max-width: 500px) {
-    body > nav {
-        font-size: 0.8em;
-    }
-    
-    body > nav ~ div.container {
-        margin: 0 0 3.8em 0;
-        line-height: 1.5em;
-    }
-}
-@media screen and (max-width: 350px) {
-    body > nav {
-        font-size: 0.25em;
-    }
-    
-    body > nav ~ div.container {
-        margin: 0 0 1.1875em 0;
-        font-size: 0.5em;
-        line-height: 1.25em;
     }
 }

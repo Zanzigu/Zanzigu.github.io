@@ -207,6 +207,7 @@ hr {
     margin: 6vw;
     border-radius: var(--radius-medium);
     box-shadow: var(--color-3) 4px 4px 0, black 0 0 10px -8px;
+    border: var(--color-3) solid 3px;
 
     min-width: 75vw;
     
@@ -225,6 +226,7 @@ hr {
 
 .cards-list > .card {
     box-shadow: var(--color-3) 4px 4px 0, black 0 0 10px -8px;
+    border: var(--color-3) solid 3px;
     padding: 1.75em 1.75em 1.25em 1.75em;
     margin: 1em;
     border-radius: var(--radius-huge);

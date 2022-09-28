@@ -310,10 +310,10 @@ form {
     margin: 25% auto 0 auto;
     padding: 1em;
     border-radius: var(--radius-medium);
-    box-shadow: var(--color-3) 3px 3px 0;
+    box-shadow: var(--color-3) 2px 2px 0;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    border: solid 3px var(--color-3);
+    border: solid 2px var(--color-3);
 }
 form::before {
     z-index: -1;
@@ -322,6 +322,10 @@ form::before {
     inset: 0;
     background: var(--color-2);
     opacity: 1;
+}
+
+form > * {    
+    transition: 0.15s;
 }
 
 form > span {
@@ -336,20 +340,25 @@ form > input:not([type="radio"]):not([type="checkbox"]), form > select {
     padding: 0.5em 1em 0.5em 1em;
     color: var(--inverted);
     box-shadow: var(--color-3) 2px 2px 0 2px, var(--color-3) 0 0 0 2px;
-    border-radius: var(--radius-huge);
+    border-radius: var(--radius-small);
     background: var(--color-2);
 }
-form > input ~ input {
+form > input ~ input, form > select ~ select, form > input ~ select, form > select ~ input {
     margin: 1.25em 0 0 0;
 }
 
-form > input[type=submit], form > input[type=reset] {
+form > input[type=submit], form > input[type=reset], form > input[type=button] {
     border-radius: var(--radius-small);
     cursor: pointer;
-    transition: 0.25s;
+    border: solid transparent 2px;
+    box-shadow: var(--color-3) 0 0 0 2px;
 }
-form > input[type=submit]:hover, form > input[type=reset]:hover {
-    filter: invert(0.9);
+form > input[type=submit]:hover, form > input[type=reset]:hover, form > input[type=button]:hover {
+    color: var(--color-3);
+    background-color: var(--inverted);
+    box-shadow: var(--inverted-soft) 2px 2px;
+    border: solid var(--inverted-soft) 2px;
+
 }
 
 

@@ -8,29 +8,21 @@
     <link rel="stylesheet" href="global.css">
     <title>CSS showoff</title>
 </head>
-<body>    
-    <nav>
-        <ul>
-            <li class="start"><span class="material-symbols-rounded">local_fire_department</span></li>
-            <li><a href="index.html">1</a></li>
-            <li><a href="index2.html">2</a></li>
-            <li class="active"><a href="form.html"><span class="material-symbols-rounded">edit_note</span></a></li>
-            <li>4</li>
-            <li class="end">5</li>
-        </ul>
-    </nav>
+<body>
+    <nav id="auto"></nav>
+    <script src="nav.js"></script>
 
     <div class="container">
         
         <form action="" class="center y">
             <label for="">Nome</label>
-            <input type="text" name="" id="">
+            <input type="text">
             <br>
             <label for="pass">password</label>
-            <input type="password" name="" id="">
+            <input type="password">
             <br>
             <label for="">Professione</label>
-            <select name="" id="">
+            <select>
                 <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
@@ -48,18 +40,18 @@
             <input type="radio" name="genere" id="fgenereBho" value="bho">
             <br>
             <span class="material-symbols-rounded">euro</span>
-            <input type="password" name="" id="" placeholder="Password">
+            <input type="password" placeholder="Password">
             <br>
             <label for="">Radio1</label>
-            <input type="checkbox" name="" id="">
+            <input type="checkbox">
             <br>
             <label for="">Radio2</label>
-            <input type="checkbox" name="" id="">
+            <input type="checkbox">
             <br>
             <span class="material-symbols-rounded">cake</span>
-            <input type="date" name="" id="">
+            <input type="date">
             <br>
-            <input type="file" name="" id="">
+            <input type="file">
             <br>
             <input type="button" value="Bottone">
             &nbsp;
@@ -68,9 +60,8 @@
             <input type="submit" value="Invia">
 
         </form>
-
+        
     </div>
 
-    <script src="scrollHandler.js"></script>
 </body>
 </html>

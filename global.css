@@ -330,18 +330,9 @@ form {
     border-radius: var(--radius-medium);
     box-shadow: var(--color-3) 2px 2px 0;
     overflow: hidden;
-    backdrop-filter: blur(10px);
+    background: var(--color-2);
     border: solid 2px var(--color-3);
 }
-form::before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--color-2);
-    opacity: 1;
-}
-
 form > * {    
     transition: 0.15s;
 }

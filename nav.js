@@ -1,7 +1,11 @@
+if (window.location.pathname == "/index.html") {
+    window.location.href = "/";
+}
+
 navText = `
     <ul>
         <li>
-            <a href="/index.html">
+            <a href="/">
                 <span class="material-symbols-rounded">schedule</span>
             </a>
         </li>
@@ -17,13 +21,10 @@ navText = `
         </li>
     </ul>
 `;
-
 const nav = document.querySelector("body > nav#auto");
-
-// append buttons to nav
 nav.innerHTML += navText;
 
-// check for the active page
+// set ative li
 for (let index = 0; index < nav.querySelector('ul').children.length; index++) {
     let li = nav.querySelector('ul').children[index];
 

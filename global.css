@@ -370,6 +370,36 @@ form > input[type=submit]:active, form > input[type=reset]:active, form > input[
     --color-3: var(--inverted-soft);
 }
 
+textarea {    
+    background: transparent;
+    color: var(--inverted);
+    resize: none;
+    font-family: 'Varela Round', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    margin-block: 1em;
+    padding: 0.5rem;
+    
+    border-radius: var(--radius-small);
+    border: 2px solid var(--color-3);
+    box-shadow: var(--color-3) 2px 2px;
+}
+textarea::-webkit-scrollbar {
+    background: var(--color-3);
+    width: 0.5em;
+    border-radius: 0.25em;
+    box-shadow: var(--color-3) 0 0 0 2px;
+}
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    background: var(--inverted-soft);
+    opacity: 0.5;
+    width: 0.25em;
+}
+textarea::-webkit-scrollbar-corner {
+    background: var(--color-3);
+}
+
 ::-webkit-file-upload-button {
     color: var(--inverted-soft);
     background: transparent;

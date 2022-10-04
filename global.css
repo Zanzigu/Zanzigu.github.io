@@ -326,7 +326,7 @@ form {
     text-align: right;
     width: fit-content;
     margin: 0 auto 0 auto;
-    padding: 1em;
+    padding: 1rem;
     border-radius: var(--radius-medium);
     box-shadow: var(--color-3) 2px 2px 0;
     overflow: hidden;
@@ -339,14 +339,14 @@ form > * {
 
 form > span {
     position: relative;
-    top: 0.25em;
+    top: 0.25rem;
 }
 form > span, form > label {
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 input:not([type="radio"]):not([type="checkbox"]), select {
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     color: var(--inverted);
     box-shadow: var(--color-3) 2px 2px 0;
     border: solid var(--color-3) 2px;
@@ -354,7 +354,7 @@ input:not([type="radio"]):not([type="checkbox"]), select {
     background: var(--color-2);
 }
 form > input ~ input, form > select ~ select, form > input ~ select, form > select ~ input {
-    margin: 1.25em 0 0 0;
+    margin: 1.25rem 0 0 0;
 }
 
 input[type=submit], input[type=reset], input[type=button] {
@@ -376,7 +376,7 @@ textarea {
     resize: none;
     font-family: 'Varela Round', 'Segoe UI', sans-serif;
     font-size: 1rem;
-    margin-block: 1em;
+    margin-block: 1rem;
     padding: 0.5rem;
     
     border-radius: var(--radius-small);
@@ -385,16 +385,16 @@ textarea {
 }
 textarea::-webkit-scrollbar {
     background: var(--color-3);
-    width: 0.5em;
-    border-radius: 0.25em;
+    width: 0.5rem;
+    border-radius: 0.25rem;
     box-shadow: var(--color-3) 0 0 0 2px;
 }
 textarea::-webkit-scrollbar-thumb {
-    border-radius: 1em;
-    -webkit-border-radius: 1em;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
     background: var(--inverted-soft);
     opacity: 0.5;
-    width: 0.25em;
+    width: 0.25rem;
 }
 textarea::-webkit-scrollbar-corner {
     background: var(--color-3);
@@ -404,7 +404,7 @@ textarea::-webkit-scrollbar-corner {
     color: var(--inverted-soft);
     background: transparent;
     border: none;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -433,8 +433,8 @@ textarea::-webkit-scrollbar-corner {
         background-color: var(--color-2);
         width: fit-content;
         height: fit-content;
-        padding: 1.5em;
-        margin: 1em;
+        padding: 1.5rem;
+        margin: 1rem;
         border-radius: var(--radius-medium);
         box-shadow: var(--color-3) 2px 2px;
 

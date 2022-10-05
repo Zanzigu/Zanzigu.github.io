@@ -265,7 +265,7 @@ hr {
     background-color: var(--color-2);
     width: fit-content;
     height: fit-content;
-    padding: 6.5vw;
+    padding: 1rem;
     margin: 6vw;
     border-radius: var(--radius-medium);
     box-shadow: var(--color-3) 2px 2px 0;

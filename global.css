@@ -13,7 +13,7 @@ body {
     --color-1: #f8f8f8;
     --color-2: #fefefe;
     --color-3: #c2c2c2;
-    --inverted: #414141;
+    --inverted: #4a4a4a;
     --inverted-soft: #4a4a4a;
     --accent: #f23269;
     --accent-soft: #fb7fa2; /* #f25481 */
@@ -44,9 +44,9 @@ body {
         background-color: #303030;
     }
     body {
-        --color-1: #141414;
-        --color-2: #1c1c1c;
-        --color-3: #252525;
+        --color-1: #121212;
+        --color-2: #1f1f1f;
+        --color-3: #323232;
         --inverted: #e1e1e1;
         --inverted-soft: #888888;
         --accent: #f23269;
@@ -211,6 +211,7 @@ body > nav a {
 
 body > nav ~ div.container {
     position: absolute;
+    overflow: auto;
     inset: 0;
     margin: 0 0 4.5em 0;
 }
@@ -265,7 +266,7 @@ hr {
     background-color: var(--color-2);
     width: fit-content;
     height: fit-content;
-    padding: 1rem;
+    padding: 6.5vw;
     margin: 6vw;
     border-radius: var(--radius-medium);
     box-shadow: var(--color-3) 2px 2px 0;
@@ -348,23 +349,39 @@ form > span, form > label {
 input:not([type="radio"]):not([type="checkbox"]), select {
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: var(--inverted);
-    box-shadow: var(--color-3) 2px 2px 0;
+    box-shadow: var(--color-3) 0 0 0;
     border: solid var(--color-3) 2px;
     border-radius: var(--radius-small);
     background: var(--color-2);
+}
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type=submit]):not([type=reset]):not([type=button]):not([type=date]):focus,
+select:focus {
+    box-shadow: var(--color-3) 2px 2px 0;
 }
 form > input ~ input, form > select ~ select, form > input ~ select, form > select ~ input {
     margin: 1.25rem 0 0 0;
 }
 
-input[type=submit], input[type=reset], input[type=button] {
+input[type=submit], 
+input[type=reset], 
+input[type=button],
+input[type=date],  
+input[type="file"] {
     cursor: pointer;
     box-shadow: var(--color-3) 0 0 0 0px!important;
 }
-input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+input[type=submit]:hover, 
+input[type=reset]:hover, 
+input[type=button]:hover, 
+input[type=date]:hover, 
+input[type="file"]:hover {
     box-shadow: var(--color-3) 2px 2px!important;
 }
-input[type=submit]:active, input[type=reset]:active, input[type=button]:active {
+input[type=submit]:active, 
+input[type=reset]:active, 
+input[type=button]:active, 
+input[type=date]:active,
+input[type="file"]:active {
     color: var(--color-1);
     --color-2: var(--inverted);
     --color-3: var(--inverted-soft);
@@ -381,6 +398,9 @@ textarea {
     
     border-radius: var(--radius-small);
     border: 2px solid var(--color-3);
+    box-shadow: var(--color-3) 0 0;
+}
+textarea:focus {
     box-shadow: var(--color-3) 2px 2px;
 }
 textarea::-webkit-scrollbar {
@@ -401,6 +421,7 @@ textarea::-webkit-scrollbar-corner {
 }
 
 ::-webkit-file-upload-button {
+    cursor: pointer;
     color: var(--inverted-soft);
     background: transparent;
     border: none;
@@ -433,7 +454,7 @@ textarea::-webkit-scrollbar-corner {
         background-color: var(--color-2);
         width: fit-content;
         height: fit-content;
-        padding: 1.5rem;
+        padding: 1.75rem;
         margin: 1rem;
         border-radius: var(--radius-medium);
         box-shadow: var(--color-3) 2px 2px;
